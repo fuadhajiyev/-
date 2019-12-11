@@ -17,8 +17,12 @@ body {
   border-radius: 50%;
   border-top: 4px solid rgb(95, 94, 94);
   -webkit-animation: spin 4s linear infinite;
-  animation: spin2 8s ease-in infinite;
+  animation: spin 8s ease-in infinite;
   position: relative;
+  border-bottom-color: rgb(59, 58, 58);
+  border-right-color: rgb(59, 58, 58);
+  border-left-color: rgb(59, 58, 58);
+
 
 }
 
@@ -45,10 +49,10 @@ body {
 .cm-spinner::after {
   border-top-color: rgb(255, 166, 0);
   -webkit-animation: spin 1.5s linear infinite;
-  animation: spin 3s ease-in-out infinite;
-  border-bottom-color: rgb(59, 58, 58);
-  border-right-color: rgb(59, 58, 58);
-  border-left-color: rgb(59, 58, 58);
+  animation: spin2 3s ease-in-out infinite;
+  border-bottom-color: rgba(65, 64, 64, 0.623);
+  border-right-color: rgb(65, 64, 64,0.623);
+  border-left-color: rgb(65, 64, 64,0.623);
 
 }
 
@@ -56,14 +60,17 @@ body {
   border: 3px solid transparent;
   border-radius: 50%;
   border-top: 4px solid rgb(95, 94, 94);
-  -webkit-animation: spin 4s linear infinite;
-  animation: spin 4s linear infinite;
+  -webkit-animation: spin3 5s linear infinite;
   position: absolute;
   top: 11px;
   left: 11px;
   right: 11px;
   bottom: 11px;
-  animation: spin2 5s alternate-reverse infinite;
+  animation: spin3 5s alternate-reverse infinite;
+  border-bottom-color: rgb(59, 58, 58);
+  border-right-color: rgb(59, 58, 58);
+  border-left-color: rgb(59, 58, 58);
+
 
 }
 
@@ -132,6 +139,32 @@ body {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+
+}
+@keyframes spin3 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.1;
+  }
+
+  50% {
+    transform: rotate(-50deg);
+    opacity: 1;
+  }
+
+  75% {
+    transform: rotate(60deg);
+    opacity: 0.6;
+
+
+
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.1;
+   
   }
 
 }

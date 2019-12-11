@@ -15,8 +15,11 @@ body {
   border-radius: 50%;
   border-top: 4px solid #5f5e5e;
   -webkit-animation: spin 4s linear infinite;
-  animation: spin2 8s ease-in infinite;
-  position: relative; }
+  animation: spin 8s ease-in infinite;
+  position: relative;
+  border-bottom-color: #3b3a3a;
+  border-right-color: #3b3a3a;
+  border-left-color: #3b3a3a; }
 
 .cm-spinner::before,
 .cm-spinner::after {
@@ -38,8 +41,8 @@ body {
 .cm-spinner::after {
   border-top-color: #ffa600;
   -webkit-animation: spin 1.5s linear infinite;
-  animation: spin 3s ease-in-out infinite;
-  border-bottom-color: #3b3a3a;
+  animation: spin2 3s ease-in-out infinite;
+  border-bottom-color: rgba(59, 58, 58, 0.801);
   border-right-color: #3b3a3a;
   border-left-color: #3b3a3a; }
 
@@ -47,14 +50,16 @@ body {
   border: 3px solid transparent;
   border-radius: 50%;
   border-top: 4px solid #5f5e5e;
-  -webkit-animation: spin 4s linear infinite;
-  animation: spin 4s linear infinite;
+  -webkit-animation: spin3 5s linear infinite;
   position: absolute;
   top: 11px;
   left: 11px;
   right: 11px;
   bottom: 11px;
-  animation: spin2 5s alternate-reverse infinite; }
+  animation: spin3 5s alternate-reverse infinite;
+  border-bottom-color: #3b3a3a;
+  border-right-color: #3b3a3a;
+  border-left-color: #3b3a3a; }
 
 @-webkit-keyframes spin {
   from {
@@ -95,3 +100,17 @@ body {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
+@keyframes spin3 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.1; }
+  50% {
+    transform: rotate(-50deg);
+    opacity: 1; }
+  75% {
+    transform: rotate(60deg);
+    opacity: 0.6; }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.1; } }
