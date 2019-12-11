@@ -1,0 +1,97 @@
+body {
+  background: black; }
+
+.container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.cm-spinner {
+  height: 150px;
+  width: 150px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  border-top: 4px solid #5f5e5e;
+  -webkit-animation: spin 4s linear infinite;
+  animation: spin2 8s ease-in infinite;
+  position: relative; }
+
+.cm-spinner::before,
+.cm-spinner::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  border-radius: 50%;
+  border: 4px solid transparent; }
+
+.cm-spinner::before {
+  border-top-color: #ffa600;
+  -webkit-animation: 4s spin linear infinite;
+  animation: 4s spin reverse infinite;
+  z-index: 10 !important; }
+
+.cm-spinner::after {
+  border-top-color: #ffa600;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 3s ease-in-out infinite;
+  border-bottom-color: #3b3a3a;
+  border-right-color: #3b3a3a;
+  border-left-color: #3b3a3a; }
+
+.box {
+  border: 3px solid transparent;
+  border-radius: 50%;
+  border-top: 4px solid #5f5e5e;
+  -webkit-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  right: 11px;
+  bottom: 11px;
+  animation: spin2 5s alternate-reverse infinite; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(-50deg); }
+  75% {
+    transform: rotate(60deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes spin2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg); }
+  75% {
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
