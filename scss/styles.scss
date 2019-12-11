@@ -51,18 +51,32 @@ body {
   border: 4px solid transparent;
 
 }
+.logo__1{
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-55%, -50%);
+  width: 140px;
+  height: 140px;
+
+}
+img{
+  width: 100%;
+  height: 100%;
+
+}
 
 .cm-spinner::before {
   border-top-color: rgb(255, 166, 0);
-  -webkit-animation: 3s spin linear infinite;
-  animation: 3s spin reverse infinite;
+  -webkit-animation: 2s spin2 reverse infinite;
+  animation: 2s spin2 reverse infinite;
   z-index: 10 !important;
 }
 
 .cm-spinner::after {
   border-top-color:rgb(255, 166, 0);
-  -webkit-animation: spin 1.5s linear infinite;
-  animation: spin2 2s ease-in-out infinite;
+  -webkit-animation: spin 1.8s reverse infinite;
+  animation: spin 1.8 linear infinite;
   border-bottom-color: rgba(92, 90, 90, 0.623);
   border-right-color: rgba(92, 90, 90, 0.623);
   border-left-color: rgba(92, 90, 90, 0.623);
@@ -116,8 +130,12 @@ body {
     transform: rotate(0deg);
   }
 
+  25% {
+    transform: rotate(20deg);
+  }
+
   50% {
-    transform: rotate(-50deg);
+    transform: rotate(-40deg);
   }
 
   75% {
@@ -136,6 +154,10 @@ body {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
   }
 
   50% {
